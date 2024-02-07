@@ -1,41 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Simple Table</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
     <style>
-      table {
-        border: 1px solid black;
-        border-collapse: collapse;
+      body {
+        font-family: Arial, sans-serif;
       }
-      th,
-      td {
-        padding: 10px;
-        text-align: left;
+      label {
+        display: block;
+        margin-bottom: 5px;
       }
-      /* Добавленные стили */
-      .highlight {
-        background-color: yellow;
+      input[type='text'],
+      input[type='email'],
+      input[type='password'],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
       }
-      #first-name {
-        font-weight: bold;
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
       }
-      td + td {
-        color: red;
+      button[type='reset'],
+      button[type='submit'] {
+        margin-right: 10px;
+      }
+      button[type='reset']:hover,
+      button[type='submit']:hover {
+        background-color: #45a049;
       }
     </style>
   </head>
   <body>
-    <table>
-      <tr>
-        <td class="highlight" id="last-name">Andrialovich</td>
-        <td id="first-name">Nikita</td>
-        <td class="highlight">Alekseevich</td>
-      </tr>
-      <tr>
-        <td class="highlight" id="last-name">Ivanov</td>
-        <td id="first-name">Petr</td>
-        <td class="highlight">Alekseevich</td>
-      </tr>
-    </table>
+    <h2>Форма регистрации</h2>
+    <form action="#" method="post">
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" placeholder="Введите свое имя" required />
+      <label for="email">Почта</label>
+      <input type="email" id="email" name="email" placeholder="Введите свою почту" required />
+      <label for="password">Пароль</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Введите свой пароль"
+        required />
+      <label for="country">Страна</label>
+      <select id="country" name="country">
+        <option value="usa">Россия</option>
+        <option value="uk">Мелкобритания</option>
+        <option value="canada">Омерика</option>
+      </select>
+
+      <label for="message">Сообщение</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        cols="50"
+        placeholder="Введите свое сообщение"></textarea>
+      <label for="newsletter"
+        >Подписаться на новости
+        <input type="checkbox" id="newsletter" name="newsletter" checked />
+      </label>
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
