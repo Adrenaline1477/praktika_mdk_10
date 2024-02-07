@@ -46,7 +46,7 @@
     <h2>Форма регистрации</h2>
     <form action="#" method="post">
       <label for="name">Имя</label>
-      <input type="text" id="name" name="name" placeholder="Введите свое имя" required />
+      <input type="text" id="name" name="name" placeholder="Введите свое имя" required autofocus />
       <label for="email">Почта</label>
       <input type="email" id="email" name="email" placeholder="Введите свою почту" required />
       <label for="password">Пароль</label>
@@ -77,5 +77,9 @@
       <button type="reset">Reset</button>
       <button type="submit">Submit</button>
     </form>
+
+    <script>
+      document.getElementById('name').focus();
+    </script>
   </body>
 </html>
