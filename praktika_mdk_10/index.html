@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="registration-form" style="background-color: #f0f0f0" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,10 @@
       label {
         display: block;
         margin-bottom: 5px;
+      }
+      .watch_block {
+        display: flex;
+        flex-direction: space-between;
       }
       input[type='text'],
       input[type='email'],
@@ -42,7 +46,7 @@
       }
     </style>
   </head>
-  <body>
+  <body contenteditable="false" tabindex="0">
     <h2>Форма регистрации</h2>
     <form action="#" method="post">
       <label for="name">Имя</label>
@@ -70,6 +74,19 @@
         rows="4"
         cols="50"
         placeholder="Введите свое сообщение"></textarea>
+      <div class="watch_block">
+        <label for="video">Видео</label>
+        <video id="video" width="400" controls>
+          <source src="2492892093135513707.mov" type="video/mp4" />
+          Ваш браузер не поддерживает тег video.
+        </video>
+        <label for="audio">Аудио</label>
+        <audio class="audio" id="audio" controls>
+          <source src="your-audio-source.mp3" type="audio/mp3" />
+          Ваш браузер не поддерживает тег audio.
+        </audio>
+      </div>
+
       <label for="newsletter"
         >Подписаться на новости
         <input type="checkbox" id="newsletter" name="newsletter" checked />
